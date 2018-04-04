@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+
+    <title>SiSMusic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- Custom styles for this template -->
+    <style>
+      @font-face {
+       font-family: 'caviardreamsregular';
+       src: url('vendor/CaviarDreams-webfont.woff') format('woff')
+      }
+    </style>
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto navbar-right">
+              <input type="search" name="search" placeholder="Buscar"/>
+            <li class="nav-item">
+              <a class="nav-link open-search" href="#"><i class="fa fa-2x fa-search"></i></a>
+            </li>
+
+              <li class="nav-item dropdown">
+            			<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> 
+                    <i class="fa fa-2x fa-envelope"></i>
+                  </a>
+           						 <div class="dropdown-menu dropdown-menu-right form-contacto" style="padding: 15px; padding-bottom: 0px;">
+             						<h2 class="title-contacto">Contáctenos</h2>
+             						<p class="text-center">Alguna inquietud? no dude en escribirnos: </p>
+									<br>
+									<form name="contactform" method="post" action="mailer.php" class="form-horizontal" role="form">
+										<div class="form-group">
+											<label for="inputName" class="col-lg-2 control-label">Organización</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Nombre u Organizacion">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Su Email">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="inputSubject" class="col-lg-2 control-label">Asunto</label>
+											<div class="col-lg-10">
+												<input type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Asunto">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="inputPassword1" class="col-lg-2 control-label">Mensaje</label>
+											<div class="col-lg-10">
+												<textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Mensaje ..."></textarea>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-lg-offset-2 col-lg-10">
+												<button type="submit" class="btn btn-default" style="background-color: #bd0760; color: #ffffff">
+													Enviar Mensaje
+												</button>
+											</div>
+										</div>
+									</form><br>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> 
+              <img class="img-fluid rounded-circle" style="width:45px; margin-top: -10px" src="http://digitalinfluencelab.com/wp-content/uploads/2014/01/sarah_williams1-300x2931.jpg"/>
+            </a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                   <h6 class="dropdown-header">Super Administrador</h6>
+                    <a class="dropdown-item" href="#">Perfil</a>
+                    <a class="dropdown-item" href="#">Ayuda</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Cerrar Sesi&oacute;n</a>
+                  </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section style="padding-top: 120px; padding-bottom:40px">
+      <div class="container section-header">
+        <div class="pull-right" style="margin-top: -20px">
+            <a data-toggle="collapse" href="#collapseCreate" role="button" aria-expanded="false" aria-controls="collapseCreate"
+             class="btn btn-primary btn-lg mt-5" style="margin-right: 6px; width: 155px"><i class="fa fa-plus"></i> CREAR</a>
+        </div>
+          <h1 class="display-3 section-title">Artistas</h1>
+      </div>
+    </section>
+
+    <section class="collapse" id="collapseCreate" style="padding-bottom:40px">
+        <div class="container">
+          <div class="card card-body">
+            <div class="row">
+                <div class="col-lg-4">
+                  <a onclick="$('#artistPhoto').click()" style="cursor: pointer;">
+                    <img width="100%" src="https://vignette.wikia.nocookie.net/the-darkest-minds/images/4/47/Placeholder.png/revision/latest?cb=20160927044640"/>
+                  </a>
+                  <input name="artistPhoto" id="artistPhoto" type="file" style="display:none"/>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Nombre</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Apellidos</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Apellidos" aria-label="Apellidos" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Edad</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Edad" aria-label="Edad" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Genero</span>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Seleccionar...</option>
+                            <option value="1">Pop</option>
+                            <option value="2">Rock</option>
+                            <option value="3">Cumbia</option>
+                            <option value="4">Metal</option>
+                            <option value="5" disabled>Reggaeton</option>
+                          </select>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1">Empresa</span>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Seleccionar...</option>
+                            <option value="1">11111111111</option>
+                            <option value="2">2222222222</option>
+                            <option value="3">3333333333</option>
+                            <option value="4">4444444444</option>
+                          </select>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Resumen</label>
+                        <textarea class="form-control" rows="10"></textarea>
+                    </div>
+                    <a class="btn btn-primary pull-right" style="color:#ffffff"><i class="fa fa-save"></i> GUARDAR</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+              <div class="card mb-3" style="max-width: 18rem;">
+                  <div class="card-header">
+                      <h5 class="card-title">Led Zeppelin</h5>
+                  </div>
+                  <img class="card-img-top" src="http://www.ledzeppelin.com//sites/g/files/g2000006376/f/201706/led_zeppelin_photo1.jpg"/>
+                  <div class="card-body">
+                    <p class="card-text justified">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque bibendum dolor tempus, ornare lacus a, semper lectus.</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="card mb-3" style="max-width: 18rem;">
+                  <div class="card-header">
+                      <h5 class="card-title">AC/DC</h5>
+                  </div>
+                  <img class="card-img-top" src="https://img.wennermedia.com/920-width/gettyimages-76838137-b37ffc8a-8fcb-4141-801d-f6a63a0dbeed.jpg"/>
+                  <div class="card-body">
+                   
+                    <p class="card-text">Curabitur tincidunt nibh in lectus feugiat, at volutpat purus sodales. Duis eleifend enim at facilisis consequat.Donec pretium augue.</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4">
+              <div class="card mb-3" style="max-width: 18rem;">
+                  <div class="card-header">
+                      <h5 class="card-title">Guns N' Roses</h5>
+                  </div>
+                  <img class="card-img-top" src="https://www.el19digital.com/files/articulos/104271.jpg"/>
+                  <div class="card-body">
+                   
+                    <p class="card-text"> Nunc maximus arcu nisi, et vulputate nunc fringilla eget. Donec interdum urna in enim fringilla bibendum. Integer bibendum tellus vitae metus porttitor tristique.</p>
+                  </div>
+                </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <h5 class="card-title">Black Sabbath</h5>
+                    </div>
+                    <img class="card-img-top" src="https://www.billboard.com/files/media/black-sabbath-1970-bw-billboard-1548.jpg"/>
+                    <div class="card-body">
+                     
+                      <p class="card-text">Donec bibendum, dui a ultricies dictum, diam urna venenatis risus, quis bibendum neque lacus rutrum odio</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <h5 class="card-title">Queen</h5>
+                    </div>
+                    <img class="card-img-top" src="https://www.rockbook.hu/sites/default/files/field/image/queen_4.jpg"/>
+                    <div class="card-body">
+                     
+                      <p class="card-text">Aliquam erat volutpat. Donec sit amet molestie lorem. Proin dui nisi, semper et odio id, ultrices semper mi. Nam fringilla.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        <h5 class="card-title">Bon Jovi</h5>
+                    </div>
+                    <img class="card-img-top" src="https://www.grammy.com/sites/com/files/styles/image_landscape_hero/public/bonjovi-hero-50704241.jpg?itok=w_bDOtTI"/>
+                    <div class="card-body">
+                      <p class="card-text">Sed congue metus quis ex condimentum maximus. Quisque justo diam, dignissim vel hendrerit ac, pretium nec libero. In libero nun.</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+           <div style="padding: 20px">
+             <br/>
+              <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <span class="page-link">Anterior</span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item active">
+                    <span class="page-link">
+                      2
+                      <span class="sr-only">(actual)</span>
+                    </span>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                  </li>
+                </ul>
+            <br/>
+      </div>
+      </div>
+  
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; SiSMusic 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('nav').on('click', '.open-search', function() {
+            $('[name="search"]').toggleClass('show')
+          });
+        });
+    </script>
+  </body>
+
+</html>

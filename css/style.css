@@ -213,3 +213,33 @@ input[type=search].show {
   position: absolute !important;
   right: 0 !important;
 }
+
+.section-title{
+  font-family: Lato !important; 
+}
+
+.section-header {
+  border-bottom: 1px solid #dedede;
+}
+
+.card-text.justified {
+ text-align: justify;
+}
+
+.page-link {
+  color: #bd0760 !important;
+}
+
+.page-item.disabled > .page-link {
+  color: #898989 !important;
+}
+
+.page-item.active > .page-link {
+  background-color:  #bd0760 !important;
+  border-color:  #97034b !important;
+  color: #ffffff !important;
+}
+
+.detail-item {
+  cursor: pointer;
+}
